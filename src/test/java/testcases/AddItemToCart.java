@@ -1,13 +1,13 @@
-package add.item.to.cart.testcase;
+package testcases;
 
-import basics.Base;
+import basics.TestBase;
 import jdk.jfr.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import screens.CartScreen;
 import screens.ViewItemDetailsScreen;
 
-public class AddItemToCart extends Base {
+public class AddItemToCart extends TestBase {
     //validData
     String email = "salmamoo504@gmail.com";
     String password = "11338899Hamed#";

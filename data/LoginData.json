@@ -7,6 +7,10 @@
     {
       "email": "salma@gmail.com",
       "password": "1234salma"
+    },
+    {
+      "email": "wrongEmail@gmail.com",
+      "password": "11338899Hamed#"
     }
   ]
 }
