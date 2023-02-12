@@ -16,7 +16,7 @@ public class SignInScreen extends ScreenBase {
     //Element Path
     private final By passwordField = By.xpath("//android.widget.EditText[@resource-id='password']");
     private final By loginButton = By.xpath("//android.widget.TextView[@text='Sign In']");
-    private final By statusAlertEmail = By.xpath("//android.widget.TextView[@index='1']");
+    private final By welcomeMessage = By.xpath("//android.widget.TextView[@text='Ahlan! Welcome back!']");
     private final By signUp = By.xpath("//android.widget.TextView[@text='Don’t have an account? Sign Up']");
     AndroidDriver driver;
     Actions actions;
@@ -72,9 +72,9 @@ public class SignInScreen extends ScreenBase {
 //     return new SignUpScreen(driver);
 //    }
 
-    public String checkMessage() {
+    public boolean checkMessage() {
 
-        return driver.findElement(statusAlertEmail).getText();
+        return driver.findElement(welcomeMessage).isDisplayed();
 
         //System.out.println(statusText);
     }

@@ -27,6 +27,11 @@ public class AddCoupon extends TestBase {
         myAccountScreen = homeScreen.openMyAccount();
         signInScreen = myAccountScreen.clickLoginButton();
     }
+    @Then("open account")
+    public void open_account() throws InterruptedException {
+        Thread.sleep(3000);
+        Assert.assertFalse(signInScreen.checkMessage(),"still  in login screen");
+    }
     @Description("fill data in login screen")
     @When("User fill email as {string} and Password as {string} and click on Sign in button")
     public void user_fill_email_as_and_password_as_and_click_on_sign_in_button(String email,String password) {

@@ -2,6 +2,7 @@ package testcases;
 
 import basics.TestBase;
 import jdk.jfr.Description;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import screens.CartScreen;
@@ -36,6 +37,7 @@ public class SignInTestCase extends TestBase {
         signInScreen.setEmail(email);
         signInScreen.setPassword(password);
         myAccountScreen = signInScreen.clickSigInButton();
+        Assert.assertTrue(signInScreen.checkMessage(), "login wrong");
     }
 
 
