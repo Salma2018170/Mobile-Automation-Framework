@@ -28,7 +28,7 @@ public class TestBase extends AbstractTestNGCucumberTests {
     AndroidDriver driver;
     Properties properties = new Properties();
 
-   @BeforeTest
+   // @BeforeTest
     public void setUp() throws IOException {
         File file = new File("src/main/resources/properties/config.properties");
         FileInputStream stream = new FileInputStream(file);
@@ -48,10 +48,10 @@ public class TestBase extends AbstractTestNGCucumberTests {
     }
 
 
-//    @AfterClass
-//    public void tearDown() {
-//        if (null != driver) {
-//            driver.quit();
-//        }
-//    }
+   // @AfterClass
+    public void tearDown() {
+        if (null != driver) {
+            driver.quit();
+        }
+    }
 }

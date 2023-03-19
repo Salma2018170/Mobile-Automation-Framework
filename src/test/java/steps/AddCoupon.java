@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import jdk.jfr.Description;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 import screens.CartScreen;
 import screens.ViewItemDetailsScreen;
 
@@ -22,7 +23,7 @@ public class AddCoupon extends TestBase {
     @Description("Allow location and go to login screen")
     @Given("User go to login screen")
     public void user_go_to_login_screen() throws IOException {
-        setUp();
+         setUp();
         homeScreen = locationsScreen.confirmYourLocation();
         myAccountScreen = homeScreen.openMyAccount();
         signInScreen = myAccountScreen.clickLoginButton();
@@ -56,7 +57,10 @@ public class AddCoupon extends TestBase {
     }
     @Then("Coupon added successfully")
     public void Coupon_added_successfully() {
+
         Assert.assertTrue(cartScreen.checkMessage(), "Coupon Not Added");
+        tearDown();
     }
+
 
 }

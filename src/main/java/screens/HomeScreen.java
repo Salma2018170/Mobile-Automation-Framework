@@ -22,7 +22,7 @@ public class HomeScreen extends ScreenBase {
     public ViewItemDetailsScreen SearchForItem(){
         WebElement element = driver.findElement(AppiumBy.androidUIAutomator(
                 "new UiScrollable(new UiSelector().scrollable(true))" +
-                        ".scrollIntoView(new UiSelector().textContains(\"T500 Touch Screen Smartwatch Black\"))"));
+                        ".scrollIntoView(new UiSelector().textContains(\"Xiberia V20\"))"));
         element.click();
         return new ViewItemDetailsScreen(driver);
     }
